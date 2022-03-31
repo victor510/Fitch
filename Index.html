@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/Main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitch - Fusion Fashion</title>
+</head>
+
+<body>
+    <!-- <div class="floating-menu-btn">
+        <svg width="28" height="28" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 12H0V10H9V12ZM18 7H0V5H18V7ZM18 2H9V0H18V2Z" fill="black"/>
+            </svg>
+    </div> -->
+    <nav class="nav">
+        <ul class="nav__links nav__links-left">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+        <a href="#" class="logo">
+            <img src="./Images/Logo.png" alt="">
+        </a>
+
+        <ul class="nav__links nav__links-Right">
+            <li><a onclick="routeToAuth()" class="btn__cta btn__cta--login" href="#">Login</a></li>
+            <li><a onclick="routeToAuth()" class="btn__cta btn__cta--Register" href="#">Register</a></li>
+        </ul>
+    </nav>
+    <section class="hero" id="hero">
+
+        <div class="hero__container">
+            <div class="image-container image-container--container-1">
+                <img src="./Images/Hero--man.jpg" alt="fashion designer">
+            </div>
+
+            <div class="text-content">
+                <h2 class="hero__deco">Elegante</h2>
+
+                <h1 class="hero__header">Your Looks, <br>My Priority.</h1>
+                <p class="hero__desc first">Maua fashion stores</p>
+                <p class="hero__desc">Your one stop shop for all collections</p>
+
+                <div class="scroll">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                      </svg>
+
+                    <p>Scroll Down</p>
+                </div>
+            </div>
+
+            <div class="image-container image-container--container-2">
+                <img src="./Images/Hero--woman.jpg" alt="fashion designer">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <div class="watermark">
+            <h1>M A U A</h1>
+        </div>
+
+        <div class="about__card-container">
+            <div class="about__card">
+                <h1>About Us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, autem vitae officiis vel nulla nesciunt quam ipsum dolorem? Consequuntur, nobis?</p>
+            </div>
+            <div class="about__card">
+                <h1>Location</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, autem vitae officiis vel nulla nesciunt quam ipsum dolorem? Consequuntur, nobis?</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+:root {
+    --clr-text: #201e1c;
+    --clr-text-translucent: #201e1c8a;
+    --clr--bg: #fafeff;
+    --clr-contrast: #f57a8c;
+    --clr-contrast-2: #d21a1d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin FlexBox($dir, $justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--clr-bg)
+}
+
+.floating-menu-btn {
+    position: fixed;
+    top: 3rem;
+    left: 1.5rem;
+    transform: translateY(-50%);
+    height: 2.5rem;
+    width: 2.5rem;
+    // background-color: var(--clr-contrast);
+    text-align: center;
+    transition: .2s ease;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        path {
+            fill: var(--clr-text);
+        }
+    }
+}
+
+.nav {
+    @include FlexBox(row, space-between, center);
+    padding-inline: 4rem;
+    width: 100%;
+    &__links {
+        @include FlexBox(row, space-between, center);
+        li {
+            list-style-type: none;
+            margin-left: 6rem;
+            padding: .5rem 0;
+            a {
+                text-decoration: none;
+                color: var(--clr--text);
+                font-family: 'Poppins', sans-serif;
+                font-size: .9rem;
+                font-weight: 500;
+                transition: all .2s ease;
+                &:hover {
+                    color: var(--clr-contrast);
+                }
+            }
+            .btn__cta {
+                border: 1px solid var(--clr-text);
+                padding: .4rem 1rem;
+                border-radius: 1rem;
+                font-weight: bold;
+                transition: all .2s ease;
+                &:hover {
+                    background-color: var(--clr-contrast);
+                    border-color: var(--clr-contrast);
+                    color: var(--clr--bg);
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    height: 85vh;
+    width: 100%;
+    &__container {
+        @include FlexBox(row, center, center);
+        .image-container {
+            height: 450px;
+            width: 340px;
+            background-color: #000;
+            position: relative;
+            overflow: hidden;
+            &--container-1 {
+                transform: translateY(1rem) translateX(-6rem);
+                height: 500px;
+            }
+            &--container-2 {
+                transform: translateY(3rem) translateX(5rem);
+                width: 400px;
+            }
+            img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: .5s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    &__deco {
+        font-family: 'Poppins';
+        font-weight: 400;
+        letter-spacing: .5ch;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: -1rem;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: var(--clr-text);
+            opacity: .3;
+        }
+    }
+    &__header {
+        font-size: 3rem;
+        line-height: 1.4;
+        font-family: 'Zero';
+        color: var(--clr-text);
+        text-align: center;
+        margin-bottom: 2rem;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: -1rem;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: var(--clr-text);
+            opacity: .5;
+        }
+    }
+    &__desc {
+        font-family: 'Poppins';
+        text-align: center;
+        font-weight: 500;
+        &.first {
+            font-weight: 300;
+            font-size: .9rem;
+            letter-spacing: .8ch;
+            margin-bottom: 1rem;
+        }
+    }
+    .text-content {
+        position: relative;
+        text-align: center;
+        .scroll {
+            position: absolute;
+            bottom: -10rem;
+            display: flex;
+            width: 100%;
+            padding: 1rem;
+            align-items: center;
+            p {
+                margin-left: 1rem;
+                font-family: 'Poppins';
+                font-size: .9rem;
+            }
+            .bi {
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+    }
+}
+
+.about {
+    @include FlexBox(row, center, center);
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding-inline: 4rem;
+    .watermark {
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h1 {
+            font-size: 7rem;
+            font-family: 'Argentum Sans';
+            font-weight: bold;
+            letter-spacing: .2ch;
+            background: linear-gradient(to right, #08f3ad, #c604f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &__card-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+    }
+    &__card {
+        color: var(--clr--bg);
+        height: 50vh;
+        width: 40%;
+        background-color: var(--clr-text-translucent);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 1rem 2.5rem;
+        font-family: 'Poppins';
+        cursor: pointer;
+        transition: .3s ease;
+        &:hover {
+            background-color: var(--clr-text);
+            transform: scale(1.05);
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 4rem;
+            position: relative;
+            letter-spacing: 1px;
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: -2rem;
+                left: 0;
+                height: 2px;
+                width: 70%;
+                background-color: var(--clr-contrast);
+            }
+        }
+        p {
+            line-height: 2;
+        }
+    }
+}
