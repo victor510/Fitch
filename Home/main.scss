@@ -1,0 +1,114 @@
+:root {
+    --clr-text: #201e1c;
+    --clr-text-translucent: #201e1c8a;
+    --clr--bg: #fafeff;
+    --clr-contrast: #f57a8c;
+    --clr-contrast-2: #d21a1d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin FlexBox($dir, $justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--clr-bg);
+    font-family: 'Poppins';
+}
+
+.hero {
+    @include FlexBox(column, space-evenly, center);
+    height: 15vh;
+    padding: 2rem 2rem;
+    background-color: #220027;
+    &__header {
+        font-family: 'Poppins', sans-serif;
+        color: var(--clr--bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.product {
+    .section-title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        width: 30vw;
+        border-radius: 10px;
+        padding: 1rem 2rem;
+        box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: .3);
+        cursor: pointer;
+    }
+    &__necklaces,
+    &__watches {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__card {
+        margin-left: 2rem;
+        background-color: #100013;
+        color: #fff;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        .image-container {
+            position: relative;
+            height: 60vh;
+            width: 30vw;
+            border-radius: 10px;
+            img {
+                border-radius: 10px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        h4 {
+            margin-top: 4px;
+            margin-left: 5px;
+        }
+    }
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    padding: .4rem 1.1rem;
+    border-radius: 40px;
+    font-size: 14px;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 2rem;
+    transition: all .3s linear;
+    &:hover {
+        background-color: #fff;
+        color: #000000;
+    }
+}

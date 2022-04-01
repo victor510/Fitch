@@ -1,9 +1,19 @@
 :root {
-  --clr-text: #201e1c;
+  --clr-text: #ffffff;
   --clr-text-translucent: #201e1c8a;
-  --clr--bg: #fafeff;
+  --clr--bg: #0cf3ae;
   --clr-contrast: #f57a8c;
   --clr-contrast-2: #d21a1d;
+}
+
+@font-face {
+  font-family: 'Zero';
+  src: url(../Fonts/Zero.ttf);
+}
+
+@font-face {
+  font-family: 'Argentum Sans';
+  src: url(../Fonts/ArgentumSans-Bold.ttf);
 }
 
 * {
@@ -13,10 +23,18 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   width: 100%;
   background-color: var(--clr-bg);
+}
+
+section {
+  background-color: var(--clr--bg);
 }
 
 .floating-menu-btn {
@@ -46,6 +64,7 @@ body {
 }
 
 .nav {
+  background-color: var(--clr--bg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,6 +270,7 @@ body {
 .hero .text-content .scroll .bi {
   height: 2rem;
   width: 2rem;
+  cursor: pointer;
 }
 
 .about {

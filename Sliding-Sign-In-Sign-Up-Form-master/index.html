@@ -10,42 +10,54 @@
 </head>
 
 <body>
+    <div id="popUp" class="pop-up">
+        <h1 class="pop-up__header">Hello</h1>
+        <p id="welcomeMessage" class="pop-up__desc">
+            We missed you User 1
+        </p>
+    </div>
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="#" class="sign-in-form">
+                <form id="loginForm" action="" class="sign-in-form">
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Email ID" />
+                        <i class="fas fa-envelope"></i>
+                        <input id="emailLogin" type="text" placeholder="Email ID" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <input id="passwordLogin" type="password" placeholder="Password" />
                     </div>
                     <input type="submit" value="Login" class="btn solid" />
 
                 </form>
-                <form id="form" action="#" class="sign-up-form">
+
+                <form id="form" class="sign-up-form">
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                        <input id="username" type="text" placeholder="Username" />
+                        <small>Error Message</small>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" />
+                        <input id="email" type="email" placeholder="Email" />
+                        <small>Error Message</small>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <input id="Password" type="password" placeholder="Password" />
+                        <small>Error Message</small>
                     </div>
-                    <div class="input-field">
+                    <!-- <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Confirm Password" />
-                    </div>
-                    <input type="submit" class="btn" value="Sign up" />
-                    <p class="social-text">Or Sign up with social platforms</p>
+                        <input id="password2" type="password" placeholder="Confirm Password" />
+
+                        <small>Error Message</small>
+                    </div> -->
+                    <!-- <input type="submit" class="btn" value="Sign up" /> -->
+                    <button type="submit" class="btn">Sign Up</button>
 
                 </form>
             </div>
@@ -79,7 +91,10 @@
         </div>
     </div>
 
+
+
     <script src="app.js"></script>
+    <!-- <script src="./auth.js"></script> -->
 </body>
 
 </html>

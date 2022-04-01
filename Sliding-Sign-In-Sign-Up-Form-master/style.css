@@ -11,6 +11,10 @@ input {
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    position: relative;
+}
+
 .container {
     position: relative;
     width: 100%;
@@ -77,6 +81,33 @@ form.sign-in-form {
     grid-template-columns: 15% 85%;
     padding: 0 0.4rem;
     position: relative;
+    border: 1px solid transparent;
+}
+
+input {
+    border-top-right-radius: 55px;
+    border-bottom-right-radius: 55px;
+    color: #444;
+}
+
+.input-field.success {
+    border: 1px solid #2ecc71;
+}
+
+.input-field.error input {
+    border-color: #e74c3c;
+}
+
+.input-field small {
+    color: #e74c3c;
+    position: absolute;
+    bottom: -1rem;
+    left: 2rem;
+    visibility: hidden;
+}
+
+.input-field.error small {
+    visibility: visible;
 }
 
 .input-field i {
@@ -358,4 +389,41 @@ form.sign-in-form {
         bottom: 28%;
         left: 50%;
     }
+}
+
+.pop-up {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.404);
+    color: rgb(255, 255, 255);
+    height: 60vh;
+    width: 40vw;
+    z-index: 1000;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    transition: all .2s linear;
+    visibility: hidden;
+}
+
+.pop-up .pop-up__header {
+    transform: translateY(-50px);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding-bottom: .8rem;
+    text-align: center;
+}
+
+.pop-up .pop-up__desc {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.pop-up.show {
+    visibility: visible;
+    top: 50%;
 }
